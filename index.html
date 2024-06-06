@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpaperaccess.com/full/1862332.jpg'); /* Replace with your sun image URL */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #FF4500; /* Orange-red */
+        }
+        form {
+            background-color: rgba(255, 250, 205, 0.9); /* Lemon chiffon with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="text"]:hover, select:hover {
+            border-color: #FF4500; /* Orange-red on hover */
+            box-shadow: 0 0 8px rgba(255, 69, 0, 0.5); /* Add a subtle shadow */
+        }
+        input[type="submit"] {
+            background-color: #FF4500; /* Orange-red */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #FF6347; /* Tomato */
+            transform: scale(1.05); /* Slightly enlarge the button on hover */
+        }
+        h2 {
+            color: #4682B4; /* Steel blue */
+        }
+        p {
+            background-color: rgba(224, 255, 255, 0.9); /* Light cyan with transparency */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form action="/convert" method="post">
+        <label for="scale">Select the temperature scale you want to input:</label>
+        <select name="scale" id="scale">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+
+        <label for="temperature">Enter the temperature:</label>
+        <input type="text" id="temperature" name="temperature">
+
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if result %}
+        <h2>Conversion Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
