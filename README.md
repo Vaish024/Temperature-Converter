@@ -9,13 +9,13 @@ Temperature Conversion:
 
 Based on the selected scale, the input temperature is converted to the other two scales using specific mathematical formulas:
 
-Celsius to Fahrenheit: (C * 9 / 5) + 32
+Celsius to Fahrenheit: (C * 9 / 5) + 32 ,
 Celsius to Kelvin    : C + 273.15
 
-Fahrenheit to Celsius: (5 / 9) * (F - 32)
+Fahrenheit to Celsius: (5 / 9) * (F - 32) ,
 Fahrenheit to Kelvin : C + 273.15
   
-Kelvin to Celsius    : K - 273.15
+Kelvin to Celsius    : K - 273.15 ,
 Kelvin to Fahrenheit : (C * 9 / 5) + 32
 
 User Interface:
